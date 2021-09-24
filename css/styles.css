@@ -160,16 +160,19 @@ button {
   }
 
   .first-card--button button:hover {
+    cursor: pointer;
     background: var(--bright-orange);
     color: var(--very-light-grey);
   }
 
   .second-card--button button:hover {
+    cursor: pointer;
     background: var(--dark-cyan);
     color: var(--very-light-grey);
   }
 
   .third-card--button button:hover {
+    cursor: pointer;
     background: var(--very-dark-cyan);
     color: var(--very-light-grey);
   }
