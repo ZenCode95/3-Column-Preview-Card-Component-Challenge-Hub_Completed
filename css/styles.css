@@ -27,7 +27,7 @@
 
 body {
   height: 100vh;
-  font-size: 15px;
+  font-size: 0.9rem;
   font-family: "Big Shoulders Display", cursive, "Lexend Deca", sans-serif;
   background-color: var(--very-light-grey);
 }
@@ -38,7 +38,7 @@ img {
 
 h1 {
   padding-bottom: 2rem;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: var(--very-light-grey);
 }
 
@@ -51,7 +51,7 @@ p {
 /* card styles */
 
 .card-container {
-  max-width: 375px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 6rem 1.5rem 6rem 1.5rem;
   overflow: hidden;
@@ -78,43 +78,127 @@ p {
 
 /* button styles */
 
-.button {
-  padding-top: 2rem;
-}
-
-button {
-  padding: 1rem 2.2rem 1rem 2.2rem;
+a {
+  padding: 0.9rem 1.9rem 0.9rem 1.9rem;
   font-weight: 400;
   font-family: "Lexend Deca";
   text-decoration: none;
+  background-color: var(--very-light-grey);
   border: 2px solid var(--very-light-grey);
   border-radius: 28px;
 }
 
-.first-card--button button {
+.first-card--button {
+  padding: 2rem 0 0.5rem 0;
+}
+
+.first-card--button a {
+  padding: 0.8rem 1.9rem 0.8rem 1.9rem;
   color: var(--bright-orange);
 }
 
-.second-card--button button {
+.second-card--button {
+  padding: 2rem 0 0.5rem 0;
+}
+
+.second-card--button a {
+  padding: 0.8rem 1.9rem 0.8rem 1.9rem;
   color: var(--dark-cyan);
 }
 
-.third-card--button button {
+.third-card--button {
+  padding: 2rem 0 0.5rem 0;
+}
+
+.third-card--button a {
+  padding: 0.8rem 1.9rem 0.8rem 1.9rem;
   color: var(--very-dark-cyan);
 }
 
 /* media queries */
 
-@media screen and (min-width: 1440px) {
-  /* universal & element styles */
+/* 375px screen width */
 
+@media screen and (min-width: 375px) {
+  .card {
+    padding: 3rem 4rem 3.5rem 3rem;
+  }
+
+  .first-card--button {
+    padding: 2.5rem 0 0.5rem 0;
+  }
+
+  .second-card--button {
+    padding: 2.5rem 0 0.5rem 0;
+  }
+
+  .third-card--button {
+    padding: 2.5rem 0 0.5rem 0;
+  }
+}
+
+/* 768px screen width */
+
+@media screen and (min-width: 768px) {
   body {
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+  }
+
+  .card {
+    padding: 3rem 2rem 0 2rem;
+  }
+
+  .card-container {
+    margin: 0;
+    overflow: hidden;
+    height: 650px;
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .first-card {
+    border-radius: 8px 0 0 8px;
+    background-color: var(--bright-orange);
+  }
+  .third-card {
+    border-radius: 0 8px 8px 0;
+    background-color: var(--very-dark-cyan);
+  }
+
+  .first-card--button a:hover {
+    cursor: pointer;
+    background: var(--bright-orange);
+    color: var(--very-light-grey);
+  }
+
+  .second-card--button a:hover {
+    cursor: pointer;
+    background: var(--dark-cyan);
+    color: var(--very-light-grey);
+  }
+
+  .third-card--button a:hover {
+    cursor: pointer;
+    background: var(--very-dark-cyan);
+    color: var(--very-light-grey);
+  }
+}
+
+/* 1440px screen width */
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
     font-family: "Big Shoulders Display", cursive, "Lexend Deca", sans-serif;
     background-color: var(--very-light-grey);
   }
@@ -123,8 +207,6 @@ button {
     padding-bottom: 4rem;
   }
 
-  /* card styles */
-
   .card-container {
     margin: 0;
     overflow: hidden;
@@ -132,10 +214,7 @@ button {
     max-width: 1440px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-radius: 8px;
   }
-
-  /* card styles */
 
   .card {
     width: 310px;
@@ -153,25 +232,23 @@ button {
     background-color: var(--very-dark-cyan);
   }
 
-  /* button styles */
-
   button {
-    font-size: 15px;
+    font-size: 0.9rem;
   }
 
-  .first-card--button button:hover {
+  .first-card--button a:hover {
     cursor: pointer;
     background: var(--bright-orange);
     color: var(--very-light-grey);
   }
 
-  .second-card--button button:hover {
+  .second-card--button a:hover {
     cursor: pointer;
     background: var(--dark-cyan);
     color: var(--very-light-grey);
   }
 
-  .third-card--button button:hover {
+  .third-card--button a:hover {
     cursor: pointer;
     background: var(--very-dark-cyan);
     color: var(--very-light-grey);
